@@ -16,9 +16,6 @@
 		EB000C172696960100A55C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB000C152696960100A55C10 /* LaunchScreen.storyboard */; };
 		EB000C2126969A6A00A55C10 /* KTyMainViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C2026969A6A00A55C10 /* KTyMainViewC.swift */; };
 		EB000C2D2696AD0900A55C10 /* CymCoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C272696AD0800A55C10 /* CymCoinManager.swift */; };
-		EB000C2E2696AD0900A55C10 /* CymAppleLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C282696AD0800A55C10 /* CymAppleLogVC.swift */; };
-		EB000C2F2696AD0900A55C10 /* CymDatamanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C292696AD0900A55C10 /* CymDatamanager.swift */; };
-		EB000C302696AD0900A55C10 /* CymApLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C2A2696AD0900A55C10 /* CymApLoginManager.swift */; };
 		EB000C312696AD0900A55C10 /* CymKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C2B2696AD0900A55C10 /* CymKeyChain.swift */; };
 		EB000C322696AD0900A55C10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB000C2C2696AD0900A55C10 /* GoogleService-Info.plist */; };
 		EB000C642696AD2D00A55C10 /* InnLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C362696AD2C00A55C10 /* InnLoginHandler.swift */; };
@@ -88,9 +85,6 @@
 		EB000C182696960100A55C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB000C2026969A6A00A55C10 /* KTyMainViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTyMainViewC.swift; sourceTree = "<group>"; };
 		EB000C272696AD0800A55C10 /* CymCoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CymCoinManager.swift; sourceTree = "<group>"; };
-		EB000C282696AD0800A55C10 /* CymAppleLogVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CymAppleLogVC.swift; sourceTree = "<group>"; };
-		EB000C292696AD0900A55C10 /* CymDatamanager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CymDatamanager.swift; sourceTree = "<group>"; };
-		EB000C2A2696AD0900A55C10 /* CymApLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CymApLoginManager.swift; sourceTree = "<group>"; };
 		EB000C2B2696AD0900A55C10 /* CymKeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CymKeyChain.swift; sourceTree = "<group>"; };
 		EB000C2C2696AD0900A55C10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB000C362696AD2C00A55C10 /* InnLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginHandler.swift; sourceTree = "<group>"; };
@@ -197,9 +191,9 @@
 		EB000C09269695FE00A55C10 /* KTymKMojiTLine */ = {
 			isa = PBXGroup;
 			children = (
+				EB395CE1269C2E3B0071A60D /* CoHun */,
 				EB000C332696AD1800A55C10 /* CoreTree */,
 				EB000C262696ACF000A55C10 /* MaNager */,
-				EB000C1F26969A5500A55C10 /* M */,
 				EB000C1E26969A4A00A55C10 /* Rottt */,
 			);
 			path = KTymKMojiTLine;
@@ -238,10 +232,7 @@
 		EB000C262696ACF000A55C10 /* MaNager */ = {
 			isa = PBXGroup;
 			children = (
-				EB000C2A2696AD0900A55C10 /* CymApLoginManager.swift */,
-				EB000C282696AD0800A55C10 /* CymAppleLogVC.swift */,
 				EB000C272696AD0800A55C10 /* CymCoinManager.swift */,
-				EB000C292696AD0900A55C10 /* CymDatamanager.swift */,
 				EB000C2B2696AD0900A55C10 /* CymKeyChain.swift */,
 				EB000C2C2696AD0900A55C10 /* GoogleService-Info.plist */,
 			);
@@ -369,6 +360,14 @@
 				EB000C9F2696F72200A55C10 /* EditTextViewController.swift */,
 			);
 			path = ListContent;
+			sourceTree = "<group>";
+		};
+		EB395CE1269C2E3B0071A60D /* CoHun */ = {
+			isa = PBXGroup;
+			children = (
+				EB000C1F26969A5500A55C10 /* M */,
+			);
+			path = CoHun;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,15 +526,12 @@
 				EB000CA02696F72200A55C10 /* EditTextViewController.swift in Sources */,
 				EB000C642696AD2D00A55C10 /* InnLoginHandler.swift in Sources */,
 				EB000C992696F6B600A55C10 /* KomojiCollectionViewCell.swift in Sources */,
-				EB000C302696AD0900A55C10 /* CymApLoginManager.swift in Sources */,
 				EB000C6C2696AD2D00A55C10 /* UIKitExtension.swift in Sources */,
 				EB000C6F2696AD2D00A55C10 /* InnLoginChallengeView.swift in Sources */,
 				EB000C982696F6B600A55C10 /* KomojiViewController.swift in Sources */,
 				EB000C842696AD2D00A55C10 /* InnLoginViewController.swift in Sources */,
 				EB000C9D2696F6EC00A55C10 /* ListViewController.swift in Sources */,
 				EB000CA22696F85B00A55C10 /* DataListFile.swift in Sources */,
-				EB000C2E2696AD0900A55C10 /* CymAppleLogVC.swift in Sources */,
-				EB000C2F2696AD0900A55C10 /* CymDatamanager.swift in Sources */,
 				EB000C6B2696AD2D00A55C10 /* Foundation+Extension.swift in Sources */,
 				EB000C942696CEA100A55C10 /* EXXtension.swift in Sources */,
 				EB000C872696AD2D00A55C10 /* HightLightingPriceManager.swift in Sources */,

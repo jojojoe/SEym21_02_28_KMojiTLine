@@ -36,12 +36,12 @@ class CASeTTingVC: UIViewController {
     
        setupView()
        setupContentView()
-       updateUserAccountStatus()
+//       updateUserAccountStatus()
        
    }
    override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
-       updateUserAccountStatus()
+//       updateUserAccountStatus()
    }
 }
 
@@ -129,7 +129,7 @@ extension CASeTTingVC {
        
    }
    @objc func loginBtnClick(sender: UIButton) {
-       self.showLoginVC()
+//       self.showLoginVC()
    }
    //
    func setupContentView() {
@@ -228,32 +228,32 @@ extension CASeTTingVC {
 extension CASeTTingVC {
     
    
-   func showLoginVC() {
-       if APLoginMana.currentLoginUser() == nil {
-           let loginVC = APLoginMana.shared.obtainVC()
-           loginVC.modalTransitionStyle = .crossDissolve
-           loginVC.modalPresentationStyle = .fullScreen
-           
-           self.present(loginVC, animated: true) {
-           }
-       }
-   }
-   func updateUserAccountStatus() {
-       if let userModel = APLoginMana.currentLoginUser() {
-           let userName  = userModel.userName
-           userNameLabel.text = (userName?.count ?? 0) > 0 ? userName : AppName
-//           logoutBtn.isHidden = false
-//           loginBtn.isHidden = true
-//            loginBtn.isUserInteractionEnabled = false
-           
-       } else {
-           userNameLabel.text = "Log in"
-//           logoutBtn.isHidden = true
-//           loginBtn.isHidden = false
-//            loginBtn.isUserInteractionEnabled = true
-           
-       }
-   }
+//   func showLoginVC() {
+//       if APLoginMana.currentLoginUser() == nil {
+//           let loginVC = APLoginMana.shared.obtainVC()
+//           loginVC.modalTransitionStyle = .crossDissolve
+//           loginVC.modalPresentationStyle = .fullScreen
+//
+//           self.present(loginVC, animated: true) {
+//           }
+//       }
+//   }
+//   func updateUserAccountStatus() {
+//       if let userModel = APLoginMana.currentLoginUser() {
+//           let userName  = userModel.userName
+//           userNameLabel.text = (userName?.count ?? 0) > 0 ? userName : AppName
+////           logoutBtn.isHidden = false
+////           loginBtn.isHidden = true
+////            loginBtn.isUserInteractionEnabled = false
+//
+//       } else {
+//           userNameLabel.text = "Log in"
+////           logoutBtn.isHidden = true
+////           loginBtn.isHidden = false
+////            loginBtn.isUserInteractionEnabled = true
+//
+//       }
+//   }
 }
 
 extension CASeTTingVC: MFMailComposeViewControllerDelegate {

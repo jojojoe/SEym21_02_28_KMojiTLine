@@ -97,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        APLoginMana.fireAppInit()
+//        APLoginMana.fireAppInit()
         setupFirebaseMessage()
         setupIAP()
         initMainVC()
@@ -153,7 +153,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        APLoginMana.receivesAuthenticationProcess(url: url, options: options)
+//        APLoginMana.receivesAuthenticationProcess(url: url, options: options)
         AppFlyerEventManager.default.flyerLibHandleOpen(url: url, options: options)
         
         return true
