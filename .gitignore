@@ -1,0 +1,7 @@
+KTymKMojiTLine.xcodeproj/xcuserdata/
+KTymKMojiTLine.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+KTymKMojiTLine.xcodeproj/project.xcworkspace/xcuserdata/
