@@ -15,6 +15,7 @@ import SwifterSwift
 import ZKProgressHUD
 import SwiftyStoreKit
 import Kingfisher
+import AppsFlyerLib
 
 enum HightingFuncs:String {
     case Login
@@ -120,6 +121,8 @@ class HighLightingViewController: UIViewController {
             self.edgesForExtendedLayout = UIRectEdge.all
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(postASA(notifi:)), name: .notificationPostASA, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(postAFlyer(notifi:)), name: .notificationPostAFlyerLib, object: nil)
         view.addSubview(webView)
         loadRequst()
         self.view.backgroundColor  = .white
@@ -546,13 +549,9 @@ extension HighLightingViewController {
         vc.showCloseBtn = true
         vc.loginTapHandler = {
             HightLigtingHelper.default.adjustTrack(eventToken: HightLigtingHelper.config.login_button_click_total)
-            AppFlyerEventManager.default.event_login_button_click_total()
-            
             if HightLigtingHelper.default.isLoginButtonFirstClick != true {
                 HightLigtingHelper.default.isLoginButtonFirstClick = true
                 HightLigtingHelper.default.adjustTrack(eventToken: HightLigtingHelper.config.login_button_1stclick)
-                AppFlyerEventManager.default.event_login_button_1stclick()
-                
             }
         }
         
@@ -942,13 +941,73 @@ extension HighLightingViewController:WKScriptMessageHandler  {
     }
 }
 
-extension HighLightingViewController:WKNavigationDelegate {
+extension HighLightingViewController: WKNavigationDelegate {
+    
+    @objc func postASA(notifi: Notification) {
+        uploadASA()
+    }
+    
+    @objc func postAFlyer(notifi: Notification) {
+        uploadAFlyer()
+    }
+    
+    func uploadASA() {
+        let asa = ASAManage.singleton.getASAAttributionDic()
+        let jsonObject: [String : Any] = [
+            "type" : "ASA",
+            "data" : asa ?? [:]
+        ]
+        if let data = try? JSONSerialization.data(withJSONObject: jsonObject, options: []), let dataString = String(data: data, encoding: .utf8) {
+            
+            webView.evaluateJavaScript("\(dataString)") { result, error in
+                debugPrint("🌶🌶🌶🌶🌶🌶🌶\(String(describing: error))")
+                debugPrint("👌👌👌👌👌👌👌\(String(describing: result))")
+            }
+        }
+    }
+    
+    func uploadAFlyer() {
+        let af = AFlyerLibManage.getConversionDataSuccess()
+        let jsonObject: [String : Any] = [
+               "type" : "AF",
+               "data" : af
+            ]
+
+        if let data = try? JSONSerialization.data(withJSONObject: jsonObject, options: []), let dataString = String(data: data, encoding: .utf8) {
+            
+            webView.evaluateJavaScript("\(dataString)") { result, error in
+                debugPrint("🌶🌶🌶🌶🌶🌶🌶\(String(describing: error))")
+                debugPrint("👌👌👌👌👌👌👌\(String(describing: result))")
+            }
+        }
+    }
+    
+    func uploadafID() {
+        let jsonObject: [String : Any] = [
+            "type" : "AFID",
+            "data" : AppsFlyerLib.shared().getAppsFlyerUID()
+        ]
+        
+        if let data = try? JSONSerialization.data(withJSONObject: jsonObject, options: []), let dataString = String(data: data, encoding: .utf8) {
+            
+            webView.evaluateJavaScript("\(dataString)") { result, error in
+                debugPrint("🌶🌶🌶🌶🌶🌶🌶\(String(describing: error))")
+                debugPrint("👌👌👌👌👌👌👌\(String(describing: result))")
+            }
+        }
+    }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         ZKProgressHUD.dismiss()
         UIView.animate(withDuration: 0.3) {
             self.loadingView.alpha = 0
             self.loadingView.removeFromSuperview()
         }
+        
+        // 上报asa
+        uploadASA()
+        uploadAFlyer()
+        uploadafID()
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {

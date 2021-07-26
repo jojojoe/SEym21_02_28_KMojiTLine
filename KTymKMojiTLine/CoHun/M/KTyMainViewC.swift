@@ -15,6 +15,7 @@ class KTyMainViewC: UIViewController {
         super.viewDidLoad()
 
         setupView()
+        AFlyerLibManage.event_LaunchApp()
     }
     
     func setupView() {

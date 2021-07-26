@@ -304,7 +304,7 @@ extension FKbCoinMana: SKProductsRequestDelegate, SKPaymentTransactionObserver {
                         let priceStr = item.price.replacingOccurrences(of: "$", with: "")
                         let priceFloat = priceStr.float() ?? 0
                         
-                        AppFlyerEventManager.default.event_PurchaseSuccessAll(symbolType: "$", needMoney: priceFloat, iapId: item.iapId)
+                        AFlyerLibManage.event_PurchaseSuccessAll(symbolType: "$", needMoney: priceFloat, iapId: item.iapId)
                         
 //                        self.track(AdjustKey.AdjustKeyAppCoinsBuy.rawValue, price: Double(price!), currencyCode: self.currencyCode)
                     }

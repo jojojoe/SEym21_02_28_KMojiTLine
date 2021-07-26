@@ -71,13 +71,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        AppFlyerEventManager.default.flyerLibContinue(userActivity: userActivity)
+        AFlyerLibManage.flyerLibContinue(userActivity: userActivity)
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         if let url = URLContexts.first?.url {
-            AppFlyerEventManager.default.flyerLibHandleOpen(url: url, options: nil)
+            AFlyerLibManage.flyerLibHandleOpen(url: url, options: nil)
         }
     }
     

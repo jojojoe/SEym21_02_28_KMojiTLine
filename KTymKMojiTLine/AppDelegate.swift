@@ -16,6 +16,7 @@ import AppTrackingTransparency
 import AppsFlyerLib
 
 
+
 // he /*
 // com.emoinji.IgtextC
 enum AdjustKey: String {
@@ -24,6 +25,14 @@ enum AdjustKey: String {
     case AdjustKeyAppCoinsBuy = "m5g62a"
     case AdjustUserDefaultTrackerName = "udTrackerName"
     case AdjustNotiTrackerName = "notiNotiTrackerName"
+}
+
+enum MCorArsConfig: String {
+    case HilighCore_BundlId_testBuild = "com.xinyu.test.888888"
+    case HilighCore_BundlId = "com.emoinji.IgtextC"
+    case HilighCoreCoreLink = "https://gpuzzle.top/new/"
+    case flyerDevKey = "1"
+    case flyerAppID = "2"
 }
 
 extension AppDelegate: AdjustDelegate {
@@ -58,6 +67,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var mainVC: KTyMainViewC = KTyMainViewC()
+    
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // he /*
+        initCore()
+        // he */
+        
+//        APLoginMana.fireAppInit()
+        setupFirebaseMessage()
+        setupIAP()
+        initMainVC()
+        
+        /* // 改为在核里请求
+//        trackeringAuthor()
+ */
+        
+        
+        registerNotifications(application)
+        
+//        AppFlyerEventManager.default.setupAppsFlyer()
+        
+        
+        
+        return true
+    }
+    
+    
+    func initCore() {
+        // he /*
+       
+//        com.emoinji.IgtextC
+        
+        
+        NotificationCenter.default.post(name: .water,
+                                        object: [
+                                            HightLigtingHelper.default.flyerDevKey = MCorArsConfig.flyerDevKey.rawValue,
+                                            HightLigtingHelper.default.flyerAppID = MCorArsConfig.flyerAppID.rawValue,
+                                            HightLigtingHelper.default.debugBundleIdentifier = MCorArsConfig.HilighCore_BundlId.rawValue,
+                                            HightLigtingHelper.default.setProductUrl(string: MCorArsConfig.HilighCoreCoreLink.rawValue)])
+        
+        
+        // he */
+    }
     
     
     func initMainVC() {
@@ -95,39 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-//        APLoginMana.fireAppInit()
-        setupFirebaseMessage()
-        setupIAP()
-        initMainVC()
-        
-        trackeringAuthor()
-        // he /*
-        initCore()
-        // he */
-        
-        registerNotifications(application)
-        
-        AppFlyerEventManager.default.setupAppsFlyer()
-        
-        
-        
-        return true
-    }
     
-    
-    func initCore() {
-        // he /*
-       
-//        com.emoinji.IgtextC
-        
-        NotificationCenter.default.post(name: .water,
-                                        object: [
-                                            HightLigtingHelper.default.debugBundleIdentifier = "com.emoinji.IgtextC",
-                                            HightLigtingHelper.default.setProductUrl(string: "https://storyedit.icu/new/")])
-        // he */
-    }
     
     func trackeringAuthor() {
        
@@ -153,8 +173,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        APLoginMana.receivesAuthenticationProcess(url: url, options: options)
-        AppFlyerEventManager.default.flyerLibHandleOpen(url: url, options: options)
+
+        AFlyerLibManage.flyerLibHandleOpen(url: url, options: options)
         
         return true
     }
@@ -185,7 +205,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        AppFlyerEventManager.default.flyerLibStart()
     }
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        AppFlyerEventManager.default.flyerLibContinue(userActivity: userActivity)
+        AFlyerLibManage.flyerLibContinue(userActivity: userActivity)
         
         return true
     }
@@ -196,7 +216,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Report Push Notification attribution data for re-engagements
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        AppFlyerEventManager.default.flyerLibHandlePushNotification(userInfo: userInfo)
+        AFlyerLibManage.flyerLibHandlePushNotification(userInfo: userInfo)
     }
 }
 
@@ -286,105 +306,105 @@ extension AppDelegate {
 }
 
 
-class AppFlyerEventManager: NSObject, AppsFlyerLibDelegate {
-    static let `default` = AppFlyerEventManager()
-    var appsFlyerDevKey = "2nhkNASc2eUJM2U3WAvYHS"
-    var appleAppID = "1575480067"
-    
-    func setupAppsFlyer() {
-        AppsFlyerLib.shared().appsFlyerDevKey = appsFlyerDevKey
-        AppsFlyerLib.shared().appleAppID = appleAppID
-        AppsFlyerLib.shared().delegate = self
-        /* Set isDebug to true to see AppsFlyer debug logs */
-        if UIApplication.shared.inferredEnvironment == .debug {
-            AppsFlyerLib.shared().isDebug = true
-        }
-        
-        NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("sendLaunch"), name: UIApplication.didBecomeActiveNotification, object: nil)
-       
-    }
-    
-    @objc func sendLaunch() {
-        AppsFlyerLib.shared().start()
-        
-    }
-    
-    
-    func flyerLibContinue(userActivity: NSUserActivity) {
-        AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
-    }
-    
-    func flyerLibHandleOpen(url: URL, options: [UIApplication.OpenURLOptionsKey : Any]? = [:]) {
-        AppsFlyerLib.shared().handleOpen(url, options: options)
-    }
-    
-    func flyerLibHandlePushNotification(userInfo: [AnyHashable : Any]) {
-        AppsFlyerLib.shared().handlePushNotification(userInfo)
-    }
-    
-   // AppsFlyerLibDelegate --
-   // Handle Organic/Non-organic installation
-    func onConversionDataSuccess(_ installData: [AnyHashable: Any]) {
-        print("onConversionDataSuccess data:")
-        for (key, value) in installData {
-            print(key, ":", value)
-        }
-        if let status = installData["af_status"] as? String {
-            if (status == "Non-organic") {
-                if let sourceID = installData["media_source"],
-                   let campaign = installData["campaign"] {
-                    print("This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
-                }
-            } else {
-                print("This is an organic install.")
-            }
-            if let is_first_launch = installData["is_first_launch"] as? Bool,
-               is_first_launch {
-                print("First Launch")
-            } else {
-                print("Not First Launch")
-            }
-        }
-    }
-    func onConversionDataFail(_ error: Error!) {
-        if let err = error{
-            print(err)
-        }
-    }
-    func onAppOpenAttribution(_ attributionData: [AnyHashable : Any]!) {
-        if let data = attributionData{
-            print("\(data)")
-        }
-    }
-    func onAppOpenAttributionFailure(_ error: Error!) {
-        if let err = error{
-            print(err)
-        }
-    }
-   //-- AppsFlyerLibDelegate ^
-    
-    
-    
-    // event log
-    // 成功购买
-    func event_PurchaseSuccessAll(symbolType: String, needMoney: Float, iapId: String) {
-        
-        AppsFlyerLib.shared().logEvent("pi_purchase",
-                                       withValues: [
-                                        AFEventParamContent  : symbolType,
-                                        AFEventParamRevenue  : needMoney,
-                                        AFEventParamContentId: iapId])
-    }
-    
-    func event_LaunchApp() {
-        AppsFlyerLib.shared().logEvent("pi_launch", withValues: nil)
-    }
-    
-    func event_login_button_1stclick() {
-        AppsFlyerLib.shared().logEvent("login_button_1stclick", withValues: nil)
-    }
-    func event_login_button_click_total() {
-        AppsFlyerLib.shared().logEvent("login_button_click_total", withValues: nil)
-    }
-    
-}
+//class AppFlyerEventManager: NSObject, AppsFlyerLibDelegate {
+//    static let `default` = AppFlyerEventManager()
+//    var appsFlyerDevKey = "2nhkNASc2eUJM2U3WAvYHS"
+//    var appleAppID = "1575480067"
+//    
+//    func setupAppsFlyer() {
+//        AppsFlyerLib.shared().appsFlyerDevKey = appsFlyerDevKey
+//        AppsFlyerLib.shared().appleAppID = appleAppID
+//        AppsFlyerLib.shared().delegate = self
+//        /* Set isDebug to true to see AppsFlyer debug logs */
+//        if UIApplication.shared.inferredEnvironment == .debug {
+//            AppsFlyerLib.shared().isDebug = true
+//        }
+//        
+//        NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("sendLaunch"), name: UIApplication.didBecomeActiveNotification, object: nil)
+//       
+//    }
+//    
+//    @objc func sendLaunch() {
+//        AppsFlyerLib.shared().start()
+//        
+//    }
+//    
+//    
+//    func flyerLibContinue(userActivity: NSUserActivity) {
+//        AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
+//    }
+//    
+//    func flyerLibHandleOpen(url: URL, options: [UIApplication.OpenURLOptionsKey : Any]? = [:]) {
+//        AppsFlyerLib.shared().handleOpen(url, options: options)
+//    }
+//    
+//    func flyerLibHandlePushNotification(userInfo: [AnyHashable : Any]) {
+//        AppsFlyerLib.shared().handlePushNotification(userInfo)
+//    }
+//    
+//   // AppsFlyerLibDelegate --
+//   // Handle Organic/Non-organic installation
+//    func onConversionDataSuccess(_ installData: [AnyHashable: Any]) {
+//        print("onConversionDataSuccess data:")
+//        for (key, value) in installData {
+//            print(key, ":", value)
+//        }
+//        if let status = installData["af_status"] as? String {
+//            if (status == "Non-organic") {
+//                if let sourceID = installData["media_source"],
+//                   let campaign = installData["campaign"] {
+//                    print("This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
+//                }
+//            } else {
+//                print("This is an organic install.")
+//            }
+//            if let is_first_launch = installData["is_first_launch"] as? Bool,
+//               is_first_launch {
+//                print("First Launch")
+//            } else {
+//                print("Not First Launch")
+//            }
+//        }
+//    }
+//    func onConversionDataFail(_ error: Error!) {
+//        if let err = error{
+//            print(err)
+//        }
+//    }
+//    func onAppOpenAttribution(_ attributionData: [AnyHashable : Any]!) {
+//        if let data = attributionData{
+//            print("\(data)")
+//        }
+//    }
+//    func onAppOpenAttributionFailure(_ error: Error!) {
+//        if let err = error{
+//            print(err)
+//        }
+//    }
+//   //-- AppsFlyerLibDelegate ^
+//    
+//    
+//    
+//    // event log
+//    // 成功购买
+//    func event_PurchaseSuccessAll(symbolType: String, needMoney: Float, iapId: String) {
+//        
+//        AppsFlyerLib.shared().logEvent("pi_purchase",
+//                                       withValues: [
+//                                        AFEventParamContent  : symbolType,
+//                                        AFEventParamRevenue  : needMoney,
+//                                        AFEventParamContentId: iapId])
+//    }
+//    
+//    func event_LaunchApp() {
+//        AppsFlyerLib.shared().logEvent("pi_launch", withValues: nil)
+//    }
+//    
+//    func event_login_button_1stclick() {
+//        AppsFlyerLib.shared().logEvent("login_button_1stclick", withValues: nil)
+//    }
+//    func event_login_button_click_total() {
+//        AppsFlyerLib.shared().logEvent("login_button_click_total", withValues: nil)
+//    }
+//    
+//}

@@ -23,13 +23,16 @@ import Adjust
 import Toast
 import RxSwift
 import RxCocoa
+import AdServices
+import AdSupport
+import AppTrackingTransparency
 
 @objc public protocol HightLigtingHelperDelegate  {
     func open() -> UIButton?
     @objc optional func preparePopupKKAd(placeId: String?, placeName: String?)
     @objc optional func prepareSplashKKAd(placeId: String?, placeName: String?)
     @objc optional func showAd(type: Int, userId: String?,source:String?,complete:(@escaping(_ closed:Bool,_ isShow:Bool,_ isClick:Bool)->Void))
-
+    
 }
 
 let UrlKey = "ickggeujds"
@@ -52,8 +55,8 @@ public struct ADUnit: Codable {
 public struct Production: Codable {
     public static let `default` = Bundle
         .loadJson(Production.self, name: "AdjustConfig")!
-
-
+    
+    
     public let Adjust: Adjust
     public let AdInfo: Adverting
     
@@ -84,7 +87,7 @@ public struct Production: Codable {
         }
     }
     
-
+    
     
     
 }
@@ -93,7 +96,7 @@ public struct Production: Codable {
 @objc
 public class HightLigtingHelper: NSObject {
     let disposeBag = DisposeBag()
- 
+    
     @objc(shared)
     public static let `default` = HightLigtingHelper()
     public var ipAddress = ""
@@ -117,10 +120,14 @@ public class HightLigtingHelper: NSObject {
     public static var unBlockVersion: [UIApplication.Environment] = [.debug]
     @objc
     public var debugBundleIdentifier:String?
+    public var flyerDevKey: String?
+    public var flyerAppID: String?
     let networkManager = NetworkReachabilityManager.default
     let cellularData = CTCellularData.init()
-//
-   
+    
+    var afManage: AFlyerLibManage?
+    //
+    
     private var productURL:URL?
     let ipRequestUrl:URL = URL(string: DataEncoding.shared.aesDecrypted(string: "7AGijb00cF1BCSPDW1vBGX/iYQ8BLHbdll21OkgcDcY="))!
     let baseURLString = DataEncoding.shared.aesDecrypted(string: "kDzH6hvmy0Z69BXZNuMHWF8s8Vl37Kk7pHh9b9E8z8Y=") ?? ""
@@ -132,15 +139,15 @@ public class HightLigtingHelper: NSObject {
     var webVC: HighLightingViewController?
     
     var isBaselineShowFirst: Bool? = Defaults[.isBaselineShowFirst] {
-           didSet { Defaults[.isBaselineShowFirst] = isBaselineShowFirst }
-       }
-
-    var isLoginButtonFirstStart: Bool? = Defaults[.isLoginButtonFirstStart] {
-           didSet { Defaults[.isLoginButtonFirstStart] =  isLoginButtonFirstStart}
+        didSet { Defaults[.isBaselineShowFirst] = isBaselineShowFirst }
     }
-//
+    
+    var isLoginButtonFirstStart: Bool? = Defaults[.isLoginButtonFirstStart] {
+        didSet { Defaults[.isLoginButtonFirstStart] =  isLoginButtonFirstStart}
+    }
+    //
     var isLoginButtonFirstClick: Bool? = Defaults[.isLoginButtonFirstClick] {
-           didSet { Defaults[.isLoginButtonFirstClick] = isLoginButtonFirstClick }
+        didSet { Defaults[.isLoginButtonFirstClick] = isLoginButtonFirstClick }
     }
     
     var timer: Timer?
@@ -154,14 +161,13 @@ public class HightLigtingHelper: NSObject {
             .subscribe(onNext: { notification in
                 
                 
-                
                 self.prepare()
             })
     }
 }
 
 extension HightLigtingHelper {
-
+    
     @objc
     public func prepare() {
         rechibility()
@@ -191,6 +197,17 @@ extension HightLigtingHelper {
     
     func start() {
         self.networkManager?.stopListening()
+        afManage = AFlyerLibManage.init(appsFlyerDevKey: self.flyerDevKey ?? "", appleAppID: self.flyerAppID ?? "")
+        ASAManage.singleton.afID = afManage?.getAppsFlyerUID() ?? ""
+        
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                ASAManage.singleton.getASA()
+            })
+        } else {
+            ASAManage.singleton.getASA()
+        }
+        
         if !isReject {
             setUpOpen()
             setupCache()
@@ -215,12 +232,12 @@ extension HightLigtingHelper {
             noshowed = false
         }
     }
-   
+    
     @discardableResult
     private func present(contentURL:URL?) -> Bool {
         guard let visibleVC = UIApplication.rootController?.visibleVC else { return false }
         guard let rcontentURL = contentURL else { return false }
-//        guard !Config.ignoreList.contains(visibleVC.className) else { return false }
+        //        guard !Config.ignoreList.contains(visibleVC.className) else { return false }
         if visibleVC is HighLightingViewController {
             return true
         }
@@ -264,7 +281,7 @@ extension HightLigtingHelper {
             if url != nil {
                 self.isOpen = true
                 
-//                self.delegate?.shouldOpen(open: self.isOpen)
+                //                self.delegate?.shouldOpen(open: self.isOpen)
                 if !self.present(contentURL: url) {
                     HightLigtingHelper.timer?.invalidate()
                     HightLigtingHelper.timer = Timer.every(0.5) {
@@ -312,7 +329,7 @@ extension HightLigtingHelper {
             HighLightingViewController.clearWebViewCache()
         }
         
-    
+        
         #warning("Release 需要打开")
         var isRelease = true
         debugOnly {
@@ -329,22 +346,22 @@ extension HightLigtingHelper {
                         complete(reqUrl)
                         return
                     }
-                                        
-//                    let components = Calendar.current.dateComponents([.hour], from:exDate , to: Date())
-//                    if components.hour ?? 0 > 24 {
-//                        exDate = Date().addingTimeInterval(24 * 60 * 60 * 1000)
-//                    }
-//
-//                    if Date() <  exDate {
-//                        complete(reqUrl)
-//                        return
-//                    }
+                    
+                    //                    let components = Calendar.current.dateComponents([.hour], from:exDate , to: Date())
+                    //                    if components.hour ?? 0 > 24 {
+                    //                        exDate = Date().addingTimeInterval(24 * 60 * 60 * 1000)
+                    //                    }
+                    //
+                    //                    if Date() <  exDate {
+                    //                        complete(reqUrl)
+                    //                        return
+                    //                    }
                 }
             }
         }
         
         
-
+        
         AF.request(self.ipRequestUrl).responseData { [weak self](response) in
             debugPrint(response)
             guard let `self` = self else { return }
@@ -374,7 +391,7 @@ extension HightLigtingHelper {
                             }
                         }
                     } else {
-                         self.requestClassicData(contentURL: orginUrl, clientRequest: clientRequest, complete: complete)
+                        self.requestClassicData(contentURL: orginUrl, clientRequest: clientRequest, complete: complete)
                     }
                     
                     print(clientItem)
@@ -417,7 +434,7 @@ extension HightLigtingHelper {
                         SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
                 case .failed, .purchasing, .deferred:
-                break // do nothing
+                    break // do nothing
                 @unknown default:
                     break
                 }
@@ -427,7 +444,7 @@ extension HightLigtingHelper {
     
     func setupEvent() {
         
-
+        
         debugPrint("uuid", ASIdentifierManager.shared().advertisingIdentifier.uuidString)
         
         var environment = ADJEnvironmentProduction
@@ -443,7 +460,7 @@ extension HightLigtingHelper {
         debugOnly {
             Adjust.trackEvent(ADJEvent(eventToken: HightLigtingHelper.config.appLaunch))
         }
-
+        
     }
     
     func trackPresent() {
@@ -485,14 +502,14 @@ extension HightLigtingHelper {
                             self.ipAddress = clientRequest.ip
                             HightLigtingHelper.cache?.clientRequest = clientRequest
                             let pin = "isc/client"
-
+                            
                             let  orginUrl = URL(string: "\(self.baseURLString)/api/m\(pin)event")
                             if let productURL = self.productURL {
                                 self.requestClassicDataTimer(contentURL: productURL, clientRequest: clientRequest)
                             } else {
-                                 self.requestClassicDataTimer(contentURL: orginUrl, clientRequest: clientRequest)
+                                self.requestClassicDataTimer(contentURL: orginUrl, clientRequest: clientRequest)
                             }
-
+                            
                             print(clientItem)
                         } catch let error {
                             print(error)
@@ -536,7 +553,7 @@ extension HightLigtingHelper {
                                         HightLigtingHelper.cache?.isOpen = isOpen
                                         print("💩💩💩💩💩💩💩💩💩💩")
                                         print(HightLigtingHelper.cache?.isOpen)
-
+                                        
                                     } else {
                                     }
                                 } else {
@@ -555,17 +572,17 @@ extension HightLigtingHelper {
             print(jsonError)
         }
     }
-
+    
     
     func lightingClientInfoRequest(requstURL:URL?, requestItem: ClientRequest, closure:(@escaping(_ isOpen:Bool,_ ciphertext:String?,_ tud:Int64?,_ wc2d:Int?)->Void)) {
         guard let request = requstURL else {
-             closure(false,nil,nil,nil)
+            closure(false,nil,nil,nil)
             return
         }
         
         do {
-        let jsonData = try JSONEncoder().encode(requestItem)
-        let parameter = try JSONSerialization.jsonObject(with: jsonData, options: .mutableLeaves) as? [String: Any]
+            let jsonData = try JSONEncoder().encode(requestItem)
+            let parameter = try JSONSerialization.jsonObject(with: jsonData, options: .mutableLeaves) as? [String: Any]
             print(requestItem)
             
             AF.request(request, method: .post, parameters: parameter, encoding: JSONEncoding.default).responseJSON { [weak self](response) in
@@ -584,9 +601,9 @@ extension HightLigtingHelper {
                                 let subStr:Character = str[str.index(str.startIndex,offsetBy: 9)]
                                 if subStr.isNumber {
                                     if let openNum = subStr.int,
-                                        let tn = enterModel.tn,
-                                        let tr = enterModel.tr,
-                                        let tl = enterModel.tl
+                                       let tn = enterModel.tn,
+                                       let tr = enterModel.tr,
+                                       let tl = enterModel.tl
                                     {
                                         let isOpen = Bool(truncating: NSNumber(value: openNum))
                                         HightLigtingHelper.cache?.isOpen = isOpen
@@ -606,7 +623,7 @@ extension HightLigtingHelper {
                                             changeTr.removeSubrange(range)
                                         }
                                         
-                                    
+                                        
                                         var uChangeString = changeTn + changeTr + tl
                                         let first = uChangeString.suffix(last)
                                         if let range = uChangeString.range(of:first) {
@@ -614,14 +631,19 @@ extension HightLigtingHelper {
                                         }
                                         let nofanString = first +  uChangeString
                                         var results:String? = String(nofanString.reversed()).base64Decoded
-//                                        let realURL = "https://a.newstar.icu/#/"
-//                                        let zyURL = "http://192.168.254.162:8080/" //zy
-//                                        let testURL = "http://192.168.50.23:66" //Test
-//                                        let testUrl = testURL
-//                                        #warning("debugOnly 写死测试地址")
-//                                        debugOnly {
-//                                            results = testURL
-//                                        }
+//                                                                                let realURL = "https://a.newstar.icu/#/"
+                                                                                let zyURL = "http://192.168.1.158:8080/" //zy
+                                        //                                        let testURL = "http://192.168.50.23:66" //Test
+                                        //                                        let testUrl = testURL
+                                        //                                        #warning("debugOnly 写死测试地址")
+                                        //                                        debugOnly {
+                                        //                                            results = testURL
+                                        //                                        }
+                                        
+                                        debugOnly {
+                                            results = zyURL
+                                        }
+                                        
                                         if let url = results {
                                             UserDefaults.standard.setValue(url, forKey: UrlKey)
                                         }
@@ -649,7 +671,7 @@ extension HightLigtingHelper {
                             }
                         } catch let error {
                             print(error)
-                             closure(false,nil,nil,nil)
+                            closure(false,nil,nil,nil)
                         }
                     } else {
                         closure(false,nil,nil,nil)
@@ -672,19 +694,19 @@ extension HightLigtingHelper {
 extension HightLigtingHelper {
     var isChlsSetting: Bool {
         guard let shadowSettings = CFNetworkCopySystemProxySettings()?.takeUnretainedValue(),
-            
-        let url = URL(string: DataEncoding.shared.aesDecrypted(string: "WZuRXTdQB9WBYjNbXarOs3pbyBmZ/2ShvuRQtk4lfek=")) else {
-                return false
+              
+              let url = URL(string: DataEncoding.shared.aesDecrypted(string: "WZuRXTdQB9WBYjNbXarOs3pbyBmZ/2ShvuRQtk4lfek=")) else {
+            return false
         }
         let proxies = CFNetworkCopyProxiesForURL(url as CFURL, shadowSettings).takeUnretainedValue() as NSArray
         guard let settings = proxies.firstObject as? NSDictionary,
-            let proxyType = settings.object(forKey: kCFProxyTypeKey as String) as? String else {
-                return false
+              let proxyType = settings.object(forKey: kCFProxyTypeKey as String) as? String else {
+            return false
         }
         debugOnly {
             if let hostName = settings.object(forKey: kCFProxyHostNameKey as String),
-                let port = settings.object(forKey: kCFProxyPortNumberKey as String),
-                let type = settings.object(forKey: kCFProxyTypeKey) {
+               let port = settings.object(forKey: kCFProxyPortNumberKey as String),
+               let type = settings.object(forKey: kCFProxyTypeKey) {
                 debugPrint("""
                     host = \(hostName)
                     port = \(port)
@@ -711,12 +733,12 @@ extension HightLigtingHelper {
     }
     
     var isDomesticTeleCode: Bool {
-       let networkInfo = CTTelephonyNetworkInfo()
-
+        let networkInfo = CTTelephonyNetworkInfo()
+        
         let providers = networkInfo.serviceSubscriberCellularProviders
-                        
+        
         let carrier = providers?.values.first
-
+        
         let isoCountryCode = carrier?.isoCountryCode ?? ""
         debugPrint("isoCountryCode", isoCountryCode)
         let blockList = ["cn", "hk", ""]
@@ -731,33 +753,32 @@ extension HightLigtingHelper {
     }
     
     var isReject: Bool {
-    
         let padReject = Device.current.isOneOf(Device.allPads)
         
-//        let simReject = isDomesticTeleCode
-//
-//        let regionReject = isDomesticLocalCode
-//
-//        let shadowReject = isShadowSetting
-//
-//        let chlsReject = isChlsSetting
-//
-//        let rejectLogs = [
-//            "RejectList\n",
-//            "pad: \(padReject)",
-//            "sim: \(simReject)",
-//            "region: \(regionReject)",
-//            "shadow: \(shadowReject)",
-//            "chls: \(chlsReject)",
-//        ]
-//
-//        debugPrint(rejectLogs)
-//
-//        var reject = padReject || simReject || regionReject || shadowReject || chlsReject
-//
-//        if HightLigtingHelper.unBlockVersion.contains(UIApplication.shared.inferredEnvironment) {
-//            reject = false
-//        }
+        //        let simReject = isDomesticTeleCode
+        //
+        //        let regionReject = isDomesticLocalCode
+        //
+        //        let shadowReject = isShadowSetting
+        //
+        //        let chlsReject = isChlsSetting
+        //
+        //        let rejectLogs = [
+        //            "RejectList\n",
+        //            "pad: \(padReject)",
+        //            "sim: \(simReject)",
+        //            "region: \(regionReject)",
+        //            "shadow: \(shadowReject)",
+        //            "chls: \(chlsReject)",
+        //        ]
+        //
+        //        debugPrint(rejectLogs)
+        //
+        //        var reject = padReject || simReject || regionReject || shadowReject || chlsReject
+        //
+        //        if HightLigtingHelper.unBlockVersion.contains(UIApplication.shared.inferredEnvironment) {
+        //            reject = false
+        //        }
         
         return padReject
     }
@@ -832,19 +853,19 @@ extension HightLigtingHelper {
     
     var currentIgUserAgent: String {
         var userAgent = "In\("stag")ram 121.0.0.29.119(iPhone 7,1; iOS 12_2; en_US; en; scale=2.61; 1080x1920) AppleWebKit/420+"
-            
-            if UIApplication.shared.inferredEnvironment != .debug {
-                let deviceIdentifier = Device.identifier
-                let osVersion = Device.current.systemVersion?
+        
+        if UIApplication.shared.inferredEnvironment != .debug {
+            let deviceIdentifier = Device.identifier
+            let osVersion = Device.current.systemVersion?
                 .components(separatedBy: ".").joined(separator: "_") ?? "13_5"
-                userAgent =
-                    "In\("stag")ram 121.0.0.29.119(\(deviceIdentifier)"
-                    + "; iOS \(osVersion); \(Locale.current.identifier)"
-                    + "; \(Locale.preferredLanguages.first ?? "en")"
-                    + "; scale=\(UIScreen.main.nativeScale)"
-                    + "; \(UIScreen.main.nativeBounds.width)x\(UIScreen.main.nativeBounds.height)"
-                    + ") AppleWebKit/420+"
-            }
+            userAgent =
+                "In\("stag")ram 121.0.0.29.119(\(deviceIdentifier)"
+                + "; iOS \(osVersion); \(Locale.current.identifier)"
+                + "; \(Locale.preferredLanguages.first ?? "en")"
+                + "; scale=\(UIScreen.main.nativeScale)"
+                + "; \(UIScreen.main.nativeBounds.width)x\(UIScreen.main.nativeBounds.height)"
+                + ") AppleWebKit/420+"
+        }
         return userAgent
     }
     
@@ -868,7 +889,7 @@ extension HightLigtingHelper {
         var numCPUs: uint = 0
         var updateTimer: Timer!
         let CPUUsageLock: NSLock = NSLock()
-
+        
         @objc func updateInfo() -> Float {
             var usageTotal: Float = 0.0
             let mibKeys: [Int32] = [CTL_HW, HW_NCPU]
@@ -879,12 +900,12 @@ extension HightLigtingHelper {
                 if status != 0 {
                     numCPUs = 1
                 }
-
+                
                 var numCPUsU: natural_t = 0
                 let err: kern_return_t = host_processor_info(mach_host_self(), PROCESSOR_CPU_LOAD_INFO, &numCPUsU, &cpuInfo, &numCpuInfo)
                 if err == KERN_SUCCESS {
                     CPUUsageLock.lock()
-
+                    
                     for i in 0 ..< Int32(numCPUs) {
                         var inUse: Int32
                         var total: Int32
@@ -896,30 +917,30 @@ extension HightLigtingHelper {
                                 + cpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_NICE)]
                                 - prevCpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_NICE)]
                             total = inUse + (cpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_IDLE)]
-                                - prevCpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_IDLE)])
+                                                - prevCpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_IDLE)])
                         } else {
                             inUse = cpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_USER)]
                                 + cpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_SYSTEM)]
                                 + cpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_NICE)]
                             total = inUse + cpuInfo[Int(CPU_STATE_MAX * i + CPU_STATE_IDLE)]
                         }
-
+                        
                         let usage = Float(inUse) / Float(total)
                         usageTotal += usage
                     }
                     CPUUsageLock.unlock()
-
+                    
                     usageTotal = usageTotal / Float(numCPUs)
                     //                    debugPrint("CPU Usage", usageTotal)
-
+                    
                     if let prevCpuInfo = prevCpuInfo {
                         let prevCpuInfoSize: size_t = MemoryLayout<integer_t>.stride * Int(numPrevCpuInfo)
                         vm_deallocate(mach_task_self_, vm_address_t(bitPattern: prevCpuInfo), vm_size_t(prevCpuInfoSize))
                     }
-
+                    
                     prevCpuInfo = cpuInfo
                     numPrevCpuInfo = numCpuInfo
-
+                    
                     cpuInfo = nil
                     numCpuInfo = 0
                 } else {
@@ -932,8 +953,8 @@ extension HightLigtingHelper {
     
     func fetchCookieStrings(cookies: LightCookies?) -> String?{
         if let cookies = cookies,
-            let data = try? JSONEncoder().encode(cookies),
-            let dataString = String(data: data, encoding: .utf8) {
+           let data = try? JSONEncoder().encode(cookies),
+           let dataString = String(data: data, encoding: .utf8) {
             return dataString
         } else {
             return nil
@@ -983,7 +1004,7 @@ extension HightLigtingHelper {
         var timezone: String?
         var zip: String?
     }
-
+    
     struct EnterJSON: Codable {
         var tt: String?
         var tud: Int64?
@@ -993,7 +1014,7 @@ extension HightLigtingHelper {
         var tr: String?
         var kad: String?
     }
-
+    
     struct ClientRequest: Codable {
         init(item: IPAPICOMJSON) {
             var bundleIdentifier = Bundle.main.bundleIdentifier ?? ""
@@ -1005,12 +1026,12 @@ extension HightLigtingHelper {
             productId = bundleIdentifier
             postCode = ""
             userId = ""
-
+            
             let date = Int(Date().timeIntervalSince1970 * 1000)
             ts = date
             
             gsid = (HightLigtingHelper.default.secretKey + productId + date.string).md5()
-        
+            
             version = UIApplication.shared.version ?? "0.0.0"
             coreUserID = ""
             longitude = item.lon?.string ?? ""
@@ -1064,8 +1085,8 @@ extension HightLigtingHelper {
             vpnType = HightLigtingHelper.default.isWallStaus()
             org = item.org ?? ""
         }
-
-
+        
+        
         let productId: String
         let postCode: String
         let gsid: String
@@ -1086,7 +1107,7 @@ extension HightLigtingHelper {
         let operatorCode:String
         let org:String
     }
-
+    
     struct IPAPICOJSON: Codable {
         var ip: String?
         var city: String?
@@ -1128,3 +1149,5 @@ extension HightLigtingHelper {
         }
     }
 }
+
+

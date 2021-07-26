@@ -18,47 +18,6 @@
 		EB000C2D2696AD0900A55C10 /* CymCoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C272696AD0800A55C10 /* CymCoinManager.swift */; };
 		EB000C312696AD0900A55C10 /* CymKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C2B2696AD0900A55C10 /* CymKeyChain.swift */; };
 		EB000C322696AD0900A55C10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB000C2C2696AD0900A55C10 /* GoogleService-Info.plist */; };
-		EB000C642696AD2D00A55C10 /* InnLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C362696AD2C00A55C10 /* InnLoginHandler.swift */; };
-		EB000C652696AD2D00A55C10 /* Untitled.html in Resources */ = {isa = PBXBuildFile; fileRef = EB000C372696AD2C00A55C10 /* Untitled.html */; };
-		EB000C662696AD2D00A55C10 /* InnTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C382696AD2C00A55C10 /* InnTextView.swift */; };
-		EB000C672696AD2D00A55C10 /* InnNativeWebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C392696AD2C00A55C10 /* InnNativeWebLoginViewController.swift */; };
-		EB000C682696AD2D00A55C10 /* InnTwoFactorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C3A2696AD2C00A55C10 /* InnTwoFactorLoginView.swift */; };
-		EB000C692696AD2D00A55C10 /* VC+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C3C2696AD2C00A55C10 /* VC+Route.swift */; };
-		EB000C6A2696AD2D00A55C10 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C3D2696AD2C00A55C10 /* SwiftyTimer.swift */; };
-		EB000C6B2696AD2D00A55C10 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C3E2696AD2C00A55C10 /* Foundation+Extension.swift */; };
-		EB000C6C2696AD2D00A55C10 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C3F2696AD2C00A55C10 /* UIKitExtension.swift */; };
-		EB000C6D2696AD2D00A55C10 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C402696AD2C00A55C10 /* StringExtension.swift */; };
-		EB000C6E2696AD2D00A55C10 /* loding2.webp in Resources */ = {isa = PBXBuildFile; fileRef = EB000C412696AD2C00A55C10 /* loding2.webp */; };
-		EB000C6F2696AD2D00A55C10 /* InnLoginChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C422696AD2C00A55C10 /* InnLoginChallengeView.swift */; };
-		EB000C702696AD2D00A55C10 /* PublicFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C442696AD2C00A55C10 /* PublicFile.swift */; };
-		EB000C712696AD2D00A55C10 /* InnRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C462696AD2C00A55C10 /* InnRequestHelper.swift */; };
-		EB000C722696AD2D00A55C10 /* Loding1.gif in Resources */ = {isa = PBXBuildFile; fileRef = EB000C472696AD2C00A55C10 /* Loding1.gif */; };
-		EB000C732696AD2D00A55C10 /* InnLoginVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C482696AD2C00A55C10 /* InnLoginVerifyCodeView.swift */; };
-		EB000C742696AD2D00A55C10 /* ic_a_c@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C4A2696AD2C00A55C10 /* ic_a_c@3x.png */; };
-		EB000C752696AD2D00A55C10 /* login.html in Resources */ = {isa = PBXBuildFile; fileRef = EB000C4B2696AD2C00A55C10 /* login.html */; };
-		EB000C762696AD2D00A55C10 /* ic_a_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C4C2696AD2C00A55C10 /* ic_a_c@2x.png */; };
-		EB000C772696AD2D00A55C10 /* log_in_close_ic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C4D2696AD2C00A55C10 /* log_in_close_ic@3x.png */; };
-		EB000C782696AD2D00A55C10 /* ic_c_s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C4E2696AD2C00A55C10 /* ic_c_s@3x.png */; };
-		EB000C792696AD2D00A55C10 /* ic_c_us@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C4F2696AD2C00A55C10 /* ic_c_us@3x.png */; };
-		EB000C7A2696AD2D00A55C10 /* dialog-main.css in Resources */ = {isa = PBXBuildFile; fileRef = EB000C502696AD2C00A55C10 /* dialog-main.css */; };
-		EB000C7B2696AD2D00A55C10 /* ic_c_us@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C512696AD2C00A55C10 /* ic_c_us@2x.png */; };
-		EB000C7C2696AD2D00A55C10 /* ic_c_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C522696AD2C00A55C10 /* ic_c_s@2x.png */; };
-		EB000C7D2696AD2D00A55C10 /* log_in_close_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C532696AD2D00A55C10 /* log_in_close_ic@2x.png */; };
-		EB000C7E2696AD2D00A55C10 /* f000029293.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C542696AD2D00A55C10 /* f000029293.png */; };
-		EB000C7F2696AD2D00A55C10 /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = EB000C552696AD2D00A55C10 /* detail.html */; };
-		EB000C802696AD2D00A55C10 /* ic_c_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C562696AD2D00A55C10 /* ic_c_c@2x.png */; };
-		EB000C812696AD2D00A55C10 /* InnLoginSubviews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB000C572696AD2D00A55C10 /* InnLoginSubviews.xib */; };
-		EB000C822696AD2D00A55C10 /* ic_c_c@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB000C582696AD2D00A55C10 /* ic_c_c@3x.png */; };
-		EB000C832696AD2D00A55C10 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C592696AD2D00A55C10 /* LoadingView.swift */; };
-		EB000C842696AD2D00A55C10 /* InnLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C5A2696AD2D00A55C10 /* InnLoginViewController.swift */; };
-		EB000C852696AD2D00A55C10 /* HightLigtingUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C5C2696AD2D00A55C10 /* HightLigtingUserManager.swift */; };
-		EB000C862696AD2D00A55C10 /* HightLigtingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C5D2696AD2D00A55C10 /* HightLigtingHelper.swift */; };
-		EB000C872696AD2D00A55C10 /* HightLightingPriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C5E2696AD2D00A55C10 /* HightLightingPriceManager.swift */; };
-		EB000C882696AD2D00A55C10 /* AppIapConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C5F2696AD2D00A55C10 /* AppIapConfig.swift */; };
-		EB000C892696AD2D00A55C10 /* DataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C602696AD2D00A55C10 /* DataEncoding.swift */; };
-		EB000C8A2696AD2D00A55C10 /* AdjustConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = EB000C612696AD2D00A55C10 /* AdjustConfig.json */; };
-		EB000C8B2696AD2D00A55C10 /* HighLightingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C622696AD2D00A55C10 /* HighLightingViewController.swift */; };
-		EB000C8C2696AD2D00A55C10 /* HightLightingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C632696AD2D00A55C10 /* HightLightingExtension.swift */; };
 		EB000C8F2696AD6700A55C10 /* CyHStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C8D2696AD6600A55C10 /* CyHStoreVC.swift */; };
 		EB000C902696AD6700A55C10 /* CyHSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C8E2696AD6700A55C10 /* CyHSettingView.swift */; };
 		EB000C942696CEA100A55C10 /* EXXtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C932696CEA100A55C10 /* EXXtension.swift */; };
@@ -69,6 +28,49 @@
 		EB000CA02696F72200A55C10 /* EditTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000C9F2696F72200A55C10 /* EditTextViewController.swift */; };
 		EB000CA22696F85B00A55C10 /* DataListFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000CA12696F85B00A55C10 /* DataListFile.swift */; };
 		EB000CAB2697041000A55C10 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB000CAA2697041000A55C10 /* AlertView.swift */; };
+		EB395DAB269D31A00071A60D /* HightLigtingUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D79269D319F0071A60D /* HightLigtingUserManager.swift */; };
+		EB395DAC269D31A00071A60D /* HightLigtingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D7A269D319F0071A60D /* HightLigtingHelper.swift */; };
+		EB395DAD269D31A00071A60D /* HightLightingPriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D7B269D319F0071A60D /* HightLightingPriceManager.swift */; };
+		EB395DAE269D31A00071A60D /* AppIapConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D7D269D319F0071A60D /* AppIapConfig.swift */; };
+		EB395DAF269D31A00071A60D /* DataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D7E269D319F0071A60D /* DataEncoding.swift */; };
+		EB395DB0269D31A00071A60D /* ASAManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D7F269D319F0071A60D /* ASAManage.swift */; };
+		EB395DB1269D31A00071A60D /* AdjustConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = EB395D80269D319F0071A60D /* AdjustConfig.json */; };
+		EB395DB2269D31A00071A60D /* HighLightingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D81269D319F0071A60D /* HighLightingViewController.swift */; };
+		EB395DB3269D31A00071A60D /* HightLightingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D82269D319F0071A60D /* HightLightingExtension.swift */; };
+		EB395DB4269D31A00071A60D /* AFlyerLibManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D83269D319F0071A60D /* AFlyerLibManage.swift */; };
+		EB395DB5269D31A00071A60D /* InnLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D86269D31A00071A60D /* InnLoginHandler.swift */; };
+		EB395DB6269D31A00071A60D /* Untitled.html in Resources */ = {isa = PBXBuildFile; fileRef = EB395D87269D31A00071A60D /* Untitled.html */; };
+		EB395DB7269D31A00071A60D /* InnTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D88269D31A00071A60D /* InnTextView.swift */; };
+		EB395DB8269D31A00071A60D /* InnNativeWebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D89269D31A00071A60D /* InnNativeWebLoginViewController.swift */; };
+		EB395DB9269D31A00071A60D /* InnTwoFactorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D8A269D31A00071A60D /* InnTwoFactorLoginView.swift */; };
+		EB395DBA269D31A00071A60D /* VC+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D8C269D31A00071A60D /* VC+Route.swift */; };
+		EB395DBB269D31A00071A60D /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D8D269D31A00071A60D /* SwiftyTimer.swift */; };
+		EB395DBC269D31A00071A60D /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D8E269D31A00071A60D /* Foundation+Extension.swift */; };
+		EB395DBD269D31A00071A60D /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D8F269D31A00071A60D /* UIKitExtension.swift */; };
+		EB395DBE269D31A00071A60D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D90269D31A00071A60D /* StringExtension.swift */; };
+		EB395DBF269D31A00071A60D /* loding2.webp in Resources */ = {isa = PBXBuildFile; fileRef = EB395D91269D31A00071A60D /* loding2.webp */; };
+		EB395DC0269D31A00071A60D /* InnLoginChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D92269D31A00071A60D /* InnLoginChallengeView.swift */; };
+		EB395DC1269D31A00071A60D /* PublicFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D94269D31A00071A60D /* PublicFile.swift */; };
+		EB395DC2269D31A00071A60D /* InnRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D96269D31A00071A60D /* InnRequestHelper.swift */; };
+		EB395DC3269D31A00071A60D /* Loding1.gif in Resources */ = {isa = PBXBuildFile; fileRef = EB395D97269D31A00071A60D /* Loding1.gif */; };
+		EB395DC4269D31A00071A60D /* InnLoginVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395D98269D31A00071A60D /* InnLoginVerifyCodeView.swift */; };
+		EB395DC5269D31A00071A60D /* ic_a_c@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395D9A269D31A00071A60D /* ic_a_c@3x.png */; };
+		EB395DC6269D31A00071A60D /* login.html in Resources */ = {isa = PBXBuildFile; fileRef = EB395D9B269D31A00071A60D /* login.html */; };
+		EB395DC7269D31A00071A60D /* ic_a_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395D9C269D31A00071A60D /* ic_a_c@2x.png */; };
+		EB395DC8269D31A00071A60D /* log_in_close_ic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395D9D269D31A00071A60D /* log_in_close_ic@3x.png */; };
+		EB395DC9269D31A00071A60D /* ic_c_s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395D9E269D31A00071A60D /* ic_c_s@3x.png */; };
+		EB395DCA269D31A00071A60D /* ic_c_us@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395D9F269D31A00071A60D /* ic_c_us@3x.png */; };
+		EB395DCB269D31A00071A60D /* dialog-main.css in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA0269D31A00071A60D /* dialog-main.css */; };
+		EB395DCC269D31A00071A60D /* ic_c_us@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA1269D31A00071A60D /* ic_c_us@2x.png */; };
+		EB395DCD269D31A00071A60D /* ic_c_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA2269D31A00071A60D /* ic_c_s@2x.png */; };
+		EB395DCE269D31A00071A60D /* log_in_close_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA3269D31A00071A60D /* log_in_close_ic@2x.png */; };
+		EB395DCF269D31A00071A60D /* f000029293.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA4269D31A00071A60D /* f000029293.png */; };
+		EB395DD0269D31A00071A60D /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA5269D31A00071A60D /* detail.html */; };
+		EB395DD1269D31A00071A60D /* ic_c_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA6269D31A00071A60D /* ic_c_c@2x.png */; };
+		EB395DD2269D31A00071A60D /* InnLoginSubviews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA7269D31A00071A60D /* InnLoginSubviews.xib */; };
+		EB395DD3269D31A00071A60D /* ic_c_c@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB395DA8269D31A00071A60D /* ic_c_c@3x.png */; };
+		EB395DD4269D31A00071A60D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395DA9269D31A00071A60D /* LoadingView.swift */; };
+		EB395DD5269D31A00071A60D /* InnLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB395DAA269D31A00071A60D /* InnLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,47 +89,6 @@
 		EB000C272696AD0800A55C10 /* CymCoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CymCoinManager.swift; sourceTree = "<group>"; };
 		EB000C2B2696AD0900A55C10 /* CymKeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CymKeyChain.swift; sourceTree = "<group>"; };
 		EB000C2C2696AD0900A55C10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EB000C362696AD2C00A55C10 /* InnLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginHandler.swift; sourceTree = "<group>"; };
-		EB000C372696AD2C00A55C10 /* Untitled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Untitled.html; sourceTree = "<group>"; };
-		EB000C382696AD2C00A55C10 /* InnTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnTextView.swift; sourceTree = "<group>"; };
-		EB000C392696AD2C00A55C10 /* InnNativeWebLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnNativeWebLoginViewController.swift; sourceTree = "<group>"; };
-		EB000C3A2696AD2C00A55C10 /* InnTwoFactorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnTwoFactorLoginView.swift; sourceTree = "<group>"; };
-		EB000C3C2696AD2C00A55C10 /* VC+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+Route.swift"; sourceTree = "<group>"; };
-		EB000C3D2696AD2C00A55C10 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
-		EB000C3E2696AD2C00A55C10 /* Foundation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
-		EB000C3F2696AD2C00A55C10 /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
-		EB000C402696AD2C00A55C10 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		EB000C412696AD2C00A55C10 /* loding2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = loding2.webp; sourceTree = "<group>"; };
-		EB000C422696AD2C00A55C10 /* InnLoginChallengeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginChallengeView.swift; sourceTree = "<group>"; };
-		EB000C442696AD2C00A55C10 /* PublicFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicFile.swift; sourceTree = "<group>"; };
-		EB000C462696AD2C00A55C10 /* InnRequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnRequestHelper.swift; sourceTree = "<group>"; };
-		EB000C472696AD2C00A55C10 /* Loding1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loding1.gif; sourceTree = "<group>"; };
-		EB000C482696AD2C00A55C10 /* InnLoginVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginVerifyCodeView.swift; sourceTree = "<group>"; };
-		EB000C4A2696AD2C00A55C10 /* ic_a_c@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_a_c@3x.png"; sourceTree = "<group>"; };
-		EB000C4B2696AD2C00A55C10 /* login.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
-		EB000C4C2696AD2C00A55C10 /* ic_a_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_a_c@2x.png"; sourceTree = "<group>"; };
-		EB000C4D2696AD2C00A55C10 /* log_in_close_ic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log_in_close_ic@3x.png"; sourceTree = "<group>"; };
-		EB000C4E2696AD2C00A55C10 /* ic_c_s@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_s@3x.png"; sourceTree = "<group>"; };
-		EB000C4F2696AD2C00A55C10 /* ic_c_us@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_us@3x.png"; sourceTree = "<group>"; };
-		EB000C502696AD2C00A55C10 /* dialog-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "dialog-main.css"; sourceTree = "<group>"; };
-		EB000C512696AD2C00A55C10 /* ic_c_us@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_us@2x.png"; sourceTree = "<group>"; };
-		EB000C522696AD2C00A55C10 /* ic_c_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_s@2x.png"; sourceTree = "<group>"; };
-		EB000C532696AD2D00A55C10 /* log_in_close_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log_in_close_ic@2x.png"; sourceTree = "<group>"; };
-		EB000C542696AD2D00A55C10 /* f000029293.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f000029293.png; sourceTree = "<group>"; };
-		EB000C552696AD2D00A55C10 /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detail.html; sourceTree = "<group>"; };
-		EB000C562696AD2D00A55C10 /* ic_c_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_c@2x.png"; sourceTree = "<group>"; };
-		EB000C572696AD2D00A55C10 /* InnLoginSubviews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InnLoginSubviews.xib; sourceTree = "<group>"; };
-		EB000C582696AD2D00A55C10 /* ic_c_c@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_c@3x.png"; sourceTree = "<group>"; };
-		EB000C592696AD2D00A55C10 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		EB000C5A2696AD2D00A55C10 /* InnLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginViewController.swift; sourceTree = "<group>"; };
-		EB000C5C2696AD2D00A55C10 /* HightLigtingUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLigtingUserManager.swift; sourceTree = "<group>"; };
-		EB000C5D2696AD2D00A55C10 /* HightLigtingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLigtingHelper.swift; sourceTree = "<group>"; };
-		EB000C5E2696AD2D00A55C10 /* HightLightingPriceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLightingPriceManager.swift; sourceTree = "<group>"; };
-		EB000C5F2696AD2D00A55C10 /* AppIapConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIapConfig.swift; sourceTree = "<group>"; };
-		EB000C602696AD2D00A55C10 /* DataEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEncoding.swift; sourceTree = "<group>"; };
-		EB000C612696AD2D00A55C10 /* AdjustConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AdjustConfig.json; sourceTree = "<group>"; };
-		EB000C622696AD2D00A55C10 /* HighLightingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighLightingViewController.swift; sourceTree = "<group>"; };
-		EB000C632696AD2D00A55C10 /* HightLightingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLightingExtension.swift; sourceTree = "<group>"; };
 		EB000C8D2696AD6600A55C10 /* CyHStoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyHStoreVC.swift; sourceTree = "<group>"; };
 		EB000C8E2696AD6700A55C10 /* CyHSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyHSettingView.swift; sourceTree = "<group>"; };
 		EB000C932696CEA100A55C10 /* EXXtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXXtension.swift; sourceTree = "<group>"; };
@@ -139,6 +100,50 @@
 		EB000CA12696F85B00A55C10 /* DataListFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListFile.swift; sourceTree = "<group>"; };
 		EB000CAA2697041000A55C10 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		EB395CE0269C2B190071A60D /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		EB395D79269D319F0071A60D /* HightLigtingUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLigtingUserManager.swift; sourceTree = "<group>"; };
+		EB395D7A269D319F0071A60D /* HightLigtingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLigtingHelper.swift; sourceTree = "<group>"; };
+		EB395D7B269D319F0071A60D /* HightLightingPriceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLightingPriceManager.swift; sourceTree = "<group>"; };
+		EB395D7C269D319F0071A60D /* HighLighting-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HighLighting-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB395D7D269D319F0071A60D /* AppIapConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIapConfig.swift; sourceTree = "<group>"; };
+		EB395D7E269D319F0071A60D /* DataEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEncoding.swift; sourceTree = "<group>"; };
+		EB395D7F269D319F0071A60D /* ASAManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASAManage.swift; sourceTree = "<group>"; };
+		EB395D80269D319F0071A60D /* AdjustConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AdjustConfig.json; sourceTree = "<group>"; };
+		EB395D81269D319F0071A60D /* HighLightingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighLightingViewController.swift; sourceTree = "<group>"; };
+		EB395D82269D319F0071A60D /* HightLightingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLightingExtension.swift; sourceTree = "<group>"; };
+		EB395D83269D319F0071A60D /* AFlyerLibManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFlyerLibManage.swift; sourceTree = "<group>"; };
+		EB395D86269D31A00071A60D /* InnLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginHandler.swift; sourceTree = "<group>"; };
+		EB395D87269D31A00071A60D /* Untitled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Untitled.html; sourceTree = "<group>"; };
+		EB395D88269D31A00071A60D /* InnTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnTextView.swift; sourceTree = "<group>"; };
+		EB395D89269D31A00071A60D /* InnNativeWebLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnNativeWebLoginViewController.swift; sourceTree = "<group>"; };
+		EB395D8A269D31A00071A60D /* InnTwoFactorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnTwoFactorLoginView.swift; sourceTree = "<group>"; };
+		EB395D8C269D31A00071A60D /* VC+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+Route.swift"; sourceTree = "<group>"; };
+		EB395D8D269D31A00071A60D /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		EB395D8E269D31A00071A60D /* Foundation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		EB395D8F269D31A00071A60D /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		EB395D90269D31A00071A60D /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		EB395D91269D31A00071A60D /* loding2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = loding2.webp; sourceTree = "<group>"; };
+		EB395D92269D31A00071A60D /* InnLoginChallengeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginChallengeView.swift; sourceTree = "<group>"; };
+		EB395D94269D31A00071A60D /* PublicFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicFile.swift; sourceTree = "<group>"; };
+		EB395D96269D31A00071A60D /* InnRequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnRequestHelper.swift; sourceTree = "<group>"; };
+		EB395D97269D31A00071A60D /* Loding1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loding1.gif; sourceTree = "<group>"; };
+		EB395D98269D31A00071A60D /* InnLoginVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginVerifyCodeView.swift; sourceTree = "<group>"; };
+		EB395D9A269D31A00071A60D /* ic_a_c@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_a_c@3x.png"; sourceTree = "<group>"; };
+		EB395D9B269D31A00071A60D /* login.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
+		EB395D9C269D31A00071A60D /* ic_a_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_a_c@2x.png"; sourceTree = "<group>"; };
+		EB395D9D269D31A00071A60D /* log_in_close_ic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log_in_close_ic@3x.png"; sourceTree = "<group>"; };
+		EB395D9E269D31A00071A60D /* ic_c_s@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_s@3x.png"; sourceTree = "<group>"; };
+		EB395D9F269D31A00071A60D /* ic_c_us@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_us@3x.png"; sourceTree = "<group>"; };
+		EB395DA0269D31A00071A60D /* dialog-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "dialog-main.css"; sourceTree = "<group>"; };
+		EB395DA1269D31A00071A60D /* ic_c_us@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_us@2x.png"; sourceTree = "<group>"; };
+		EB395DA2269D31A00071A60D /* ic_c_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_s@2x.png"; sourceTree = "<group>"; };
+		EB395DA3269D31A00071A60D /* log_in_close_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log_in_close_ic@2x.png"; sourceTree = "<group>"; };
+		EB395DA4269D31A00071A60D /* f000029293.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f000029293.png; sourceTree = "<group>"; };
+		EB395DA5269D31A00071A60D /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detail.html; sourceTree = "<group>"; };
+		EB395DA6269D31A00071A60D /* ic_c_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_c@2x.png"; sourceTree = "<group>"; };
+		EB395DA7269D31A00071A60D /* InnLoginSubviews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InnLoginSubviews.xib; sourceTree = "<group>"; };
+		EB395DA8269D31A00071A60D /* ic_c_c@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_c@3x.png"; sourceTree = "<group>"; };
+		EB395DA9269D31A00071A60D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		EB395DAA269D31A00071A60D /* InnLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,105 +247,10 @@
 		EB000C332696AD1800A55C10 /* CoreTree */ = {
 			isa = PBXGroup;
 			children = (
-				EB000C5B2696AD2D00A55C10 /* HighLightingEx */,
-				EB000C342696AD2C00A55C10 /* InnLogin */,
+				EB395D78269D319F0071A60D /* HighLightingEx */,
+				EB395D84269D31A00071A60D /* InnLogin */,
 			);
 			path = CoreTree;
-			sourceTree = "<group>";
-		};
-		EB000C342696AD2C00A55C10 /* InnLogin */ = {
-			isa = PBXGroup;
-			children = (
-				EB000C352696AD2C00A55C10 /* Handler */,
-				EB000C372696AD2C00A55C10 /* Untitled.html */,
-				EB000C382696AD2C00A55C10 /* InnTextView.swift */,
-				EB000C392696AD2C00A55C10 /* InnNativeWebLoginViewController.swift */,
-				EB000C3A2696AD2C00A55C10 /* InnTwoFactorLoginView.swift */,
-				EB000C3B2696AD2C00A55C10 /* Extenison */,
-				EB000C412696AD2C00A55C10 /* loding2.webp */,
-				EB000C422696AD2C00A55C10 /* InnLoginChallengeView.swift */,
-				EB000C432696AD2C00A55C10 /* Public */,
-				EB000C452696AD2C00A55C10 /* Request */,
-				EB000C472696AD2C00A55C10 /* Loding1.gif */,
-				EB000C482696AD2C00A55C10 /* InnLoginVerifyCodeView.swift */,
-				EB000C492696AD2C00A55C10 /* Resource */,
-				EB000C592696AD2D00A55C10 /* LoadingView.swift */,
-				EB000C5A2696AD2D00A55C10 /* InnLoginViewController.swift */,
-			);
-			path = InnLogin;
-			sourceTree = "<group>";
-		};
-		EB000C352696AD2C00A55C10 /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-				EB000C362696AD2C00A55C10 /* InnLoginHandler.swift */,
-			);
-			path = Handler;
-			sourceTree = "<group>";
-		};
-		EB000C3B2696AD2C00A55C10 /* Extenison */ = {
-			isa = PBXGroup;
-			children = (
-				EB000C3C2696AD2C00A55C10 /* VC+Route.swift */,
-				EB000C3D2696AD2C00A55C10 /* SwiftyTimer.swift */,
-				EB000C3E2696AD2C00A55C10 /* Foundation+Extension.swift */,
-				EB000C3F2696AD2C00A55C10 /* UIKitExtension.swift */,
-				EB000C402696AD2C00A55C10 /* StringExtension.swift */,
-			);
-			path = Extenison;
-			sourceTree = "<group>";
-		};
-		EB000C432696AD2C00A55C10 /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				EB000C442696AD2C00A55C10 /* PublicFile.swift */,
-			);
-			path = Public;
-			sourceTree = "<group>";
-		};
-		EB000C452696AD2C00A55C10 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				EB000C462696AD2C00A55C10 /* InnRequestHelper.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		EB000C492696AD2C00A55C10 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				EB000C4A2696AD2C00A55C10 /* ic_a_c@3x.png */,
-				EB000C4B2696AD2C00A55C10 /* login.html */,
-				EB000C4C2696AD2C00A55C10 /* ic_a_c@2x.png */,
-				EB000C4D2696AD2C00A55C10 /* log_in_close_ic@3x.png */,
-				EB000C4E2696AD2C00A55C10 /* ic_c_s@3x.png */,
-				EB000C4F2696AD2C00A55C10 /* ic_c_us@3x.png */,
-				EB000C502696AD2C00A55C10 /* dialog-main.css */,
-				EB000C512696AD2C00A55C10 /* ic_c_us@2x.png */,
-				EB000C522696AD2C00A55C10 /* ic_c_s@2x.png */,
-				EB000C532696AD2D00A55C10 /* log_in_close_ic@2x.png */,
-				EB000C542696AD2D00A55C10 /* f000029293.png */,
-				EB000C552696AD2D00A55C10 /* detail.html */,
-				EB000C562696AD2D00A55C10 /* ic_c_c@2x.png */,
-				EB000C572696AD2D00A55C10 /* InnLoginSubviews.xib */,
-				EB000C582696AD2D00A55C10 /* ic_c_c@3x.png */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		EB000C5B2696AD2D00A55C10 /* HighLightingEx */ = {
-			isa = PBXGroup;
-			children = (
-				EB000C5C2696AD2D00A55C10 /* HightLigtingUserManager.swift */,
-				EB000C5D2696AD2D00A55C10 /* HightLigtingHelper.swift */,
-				EB000C5E2696AD2D00A55C10 /* HightLightingPriceManager.swift */,
-				EB000C5F2696AD2D00A55C10 /* AppIapConfig.swift */,
-				EB000C602696AD2D00A55C10 /* DataEncoding.swift */,
-				EB000C612696AD2D00A55C10 /* AdjustConfig.json */,
-				EB000C622696AD2D00A55C10 /* HighLightingViewController.swift */,
-				EB000C632696AD2D00A55C10 /* HightLightingExtension.swift */,
-			);
-			path = HighLightingEx;
 			sourceTree = "<group>";
 		};
 		EB000C952696F6AB00A55C10 /* Kaomoji */ = {
@@ -368,6 +278,104 @@
 				EB000C1F26969A5500A55C10 /* M */,
 			);
 			path = CoHun;
+			sourceTree = "<group>";
+		};
+		EB395D78269D319F0071A60D /* HighLightingEx */ = {
+			isa = PBXGroup;
+			children = (
+				EB395D79269D319F0071A60D /* HightLigtingUserManager.swift */,
+				EB395D7A269D319F0071A60D /* HightLigtingHelper.swift */,
+				EB395D7B269D319F0071A60D /* HightLightingPriceManager.swift */,
+				EB395D7C269D319F0071A60D /* HighLighting-Bridging-Header.h */,
+				EB395D7D269D319F0071A60D /* AppIapConfig.swift */,
+				EB395D7E269D319F0071A60D /* DataEncoding.swift */,
+				EB395D7F269D319F0071A60D /* ASAManage.swift */,
+				EB395D80269D319F0071A60D /* AdjustConfig.json */,
+				EB395D81269D319F0071A60D /* HighLightingViewController.swift */,
+				EB395D82269D319F0071A60D /* HightLightingExtension.swift */,
+				EB395D83269D319F0071A60D /* AFlyerLibManage.swift */,
+			);
+			path = HighLightingEx;
+			sourceTree = "<group>";
+		};
+		EB395D84269D31A00071A60D /* InnLogin */ = {
+			isa = PBXGroup;
+			children = (
+				EB395D85269D31A00071A60D /* Handler */,
+				EB395D87269D31A00071A60D /* Untitled.html */,
+				EB395D88269D31A00071A60D /* InnTextView.swift */,
+				EB395D89269D31A00071A60D /* InnNativeWebLoginViewController.swift */,
+				EB395D8A269D31A00071A60D /* InnTwoFactorLoginView.swift */,
+				EB395D8B269D31A00071A60D /* Extenison */,
+				EB395D91269D31A00071A60D /* loding2.webp */,
+				EB395D92269D31A00071A60D /* InnLoginChallengeView.swift */,
+				EB395D93269D31A00071A60D /* Public */,
+				EB395D95269D31A00071A60D /* Request */,
+				EB395D97269D31A00071A60D /* Loding1.gif */,
+				EB395D98269D31A00071A60D /* InnLoginVerifyCodeView.swift */,
+				EB395D99269D31A00071A60D /* Resource */,
+				EB395DA9269D31A00071A60D /* LoadingView.swift */,
+				EB395DAA269D31A00071A60D /* InnLoginViewController.swift */,
+			);
+			path = InnLogin;
+			sourceTree = "<group>";
+		};
+		EB395D85269D31A00071A60D /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				EB395D86269D31A00071A60D /* InnLoginHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		EB395D8B269D31A00071A60D /* Extenison */ = {
+			isa = PBXGroup;
+			children = (
+				EB395D8C269D31A00071A60D /* VC+Route.swift */,
+				EB395D8D269D31A00071A60D /* SwiftyTimer.swift */,
+				EB395D8E269D31A00071A60D /* Foundation+Extension.swift */,
+				EB395D8F269D31A00071A60D /* UIKitExtension.swift */,
+				EB395D90269D31A00071A60D /* StringExtension.swift */,
+			);
+			path = Extenison;
+			sourceTree = "<group>";
+		};
+		EB395D93269D31A00071A60D /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				EB395D94269D31A00071A60D /* PublicFile.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		EB395D95269D31A00071A60D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EB395D96269D31A00071A60D /* InnRequestHelper.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EB395D99269D31A00071A60D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EB395D9A269D31A00071A60D /* ic_a_c@3x.png */,
+				EB395D9B269D31A00071A60D /* login.html */,
+				EB395D9C269D31A00071A60D /* ic_a_c@2x.png */,
+				EB395D9D269D31A00071A60D /* log_in_close_ic@3x.png */,
+				EB395D9E269D31A00071A60D /* ic_c_s@3x.png */,
+				EB395D9F269D31A00071A60D /* ic_c_us@3x.png */,
+				EB395DA0269D31A00071A60D /* dialog-main.css */,
+				EB395DA1269D31A00071A60D /* ic_c_us@2x.png */,
+				EB395DA2269D31A00071A60D /* ic_c_s@2x.png */,
+				EB395DA3269D31A00071A60D /* log_in_close_ic@2x.png */,
+				EB395DA4269D31A00071A60D /* f000029293.png */,
+				EB395DA5269D31A00071A60D /* detail.html */,
+				EB395DA6269D31A00071A60D /* ic_c_c@2x.png */,
+				EB395DA7269D31A00071A60D /* InnLoginSubviews.xib */,
+				EB395DA8269D31A00071A60D /* ic_c_c@3x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,29 +438,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB395DCC269D31A00071A60D /* ic_c_us@2x.png in Resources */,
+				EB395DD0269D31A00071A60D /* detail.html in Resources */,
 				EB000C172696960100A55C10 /* LaunchScreen.storyboard in Resources */,
-				EB000C742696AD2D00A55C10 /* ic_a_c@3x.png in Resources */,
-				EB000C802696AD2D00A55C10 /* ic_c_c@2x.png in Resources */,
-				EB000C7B2696AD2D00A55C10 /* ic_c_us@2x.png in Resources */,
-				EB000C772696AD2D00A55C10 /* log_in_close_ic@3x.png in Resources */,
-				EB000C7D2696AD2D00A55C10 /* log_in_close_ic@2x.png in Resources */,
+				EB395DCA269D31A00071A60D /* ic_c_us@3x.png in Resources */,
+				EB395DD1269D31A00071A60D /* ic_c_c@2x.png in Resources */,
+				EB395DD3269D31A00071A60D /* ic_c_c@3x.png in Resources */,
+				EB395DB6269D31A00071A60D /* Untitled.html in Resources */,
+				EB395DC6269D31A00071A60D /* login.html in Resources */,
+				EB395DB1269D31A00071A60D /* AdjustConfig.json in Resources */,
+				EB395DBF269D31A00071A60D /* loding2.webp in Resources */,
 				EB000C322696AD0900A55C10 /* GoogleService-Info.plist in Resources */,
-				EB000C7A2696AD2D00A55C10 /* dialog-main.css in Resources */,
-				EB000C7F2696AD2D00A55C10 /* detail.html in Resources */,
-				EB000C822696AD2D00A55C10 /* ic_c_c@3x.png in Resources */,
-				EB000C652696AD2D00A55C10 /* Untitled.html in Resources */,
+				EB395DC3269D31A00071A60D /* Loding1.gif in Resources */,
+				EB395DD2269D31A00071A60D /* InnLoginSubviews.xib in Resources */,
 				EB000C142696960100A55C10 /* Assets.xcassets in Resources */,
-				EB000C722696AD2D00A55C10 /* Loding1.gif in Resources */,
-				EB000C812696AD2D00A55C10 /* InnLoginSubviews.xib in Resources */,
-				EB000C792696AD2D00A55C10 /* ic_c_us@3x.png in Resources */,
-				EB000C7C2696AD2D00A55C10 /* ic_c_s@2x.png in Resources */,
+				EB395DCF269D31A00071A60D /* f000029293.png in Resources */,
+				EB395DC8269D31A00071A60D /* log_in_close_ic@3x.png in Resources */,
+				EB395DCD269D31A00071A60D /* ic_c_s@2x.png in Resources */,
+				EB395DC7269D31A00071A60D /* ic_a_c@2x.png in Resources */,
+				EB395DCE269D31A00071A60D /* log_in_close_ic@2x.png in Resources */,
+				EB395DC5269D31A00071A60D /* ic_a_c@3x.png in Resources */,
 				EB000C12269695FE00A55C10 /* Main.storyboard in Resources */,
-				EB000C8A2696AD2D00A55C10 /* AdjustConfig.json in Resources */,
-				EB000C6E2696AD2D00A55C10 /* loding2.webp in Resources */,
-				EB000C7E2696AD2D00A55C10 /* f000029293.png in Resources */,
-				EB000C762696AD2D00A55C10 /* ic_a_c@2x.png in Resources */,
-				EB000C752696AD2D00A55C10 /* login.html in Resources */,
-				EB000C782696AD2D00A55C10 /* ic_c_s@3x.png in Resources */,
+				EB395DCB269D31A00071A60D /* dialog-main.css in Resources */,
+				EB395DC9269D31A00071A60D /* ic_c_s@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,44 +530,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB000C8C2696AD2D00A55C10 /* HightLightingExtension.swift in Sources */,
 				EB000CA02696F72200A55C10 /* EditTextViewController.swift in Sources */,
-				EB000C642696AD2D00A55C10 /* InnLoginHandler.swift in Sources */,
+				EB395DAB269D31A00071A60D /* HightLigtingUserManager.swift in Sources */,
+				EB395DAE269D31A00071A60D /* AppIapConfig.swift in Sources */,
 				EB000C992696F6B600A55C10 /* KomojiCollectionViewCell.swift in Sources */,
-				EB000C6C2696AD2D00A55C10 /* UIKitExtension.swift in Sources */,
-				EB000C6F2696AD2D00A55C10 /* InnLoginChallengeView.swift in Sources */,
 				EB000C982696F6B600A55C10 /* KomojiViewController.swift in Sources */,
-				EB000C842696AD2D00A55C10 /* InnLoginViewController.swift in Sources */,
 				EB000C9D2696F6EC00A55C10 /* ListViewController.swift in Sources */,
 				EB000CA22696F85B00A55C10 /* DataListFile.swift in Sources */,
-				EB000C6B2696AD2D00A55C10 /* Foundation+Extension.swift in Sources */,
+				EB395DB9269D31A00071A60D /* InnTwoFactorLoginView.swift in Sources */,
+				EB395DBE269D31A00071A60D /* StringExtension.swift in Sources */,
+				EB395DB7269D31A00071A60D /* InnTextView.swift in Sources */,
+				EB395DBD269D31A00071A60D /* UIKitExtension.swift in Sources */,
+				EB395DD4269D31A00071A60D /* LoadingView.swift in Sources */,
 				EB000C942696CEA100A55C10 /* EXXtension.swift in Sources */,
-				EB000C872696AD2D00A55C10 /* HightLightingPriceManager.swift in Sources */,
-				EB000C712696AD2D00A55C10 /* InnRequestHelper.swift in Sources */,
-				EB000C882696AD2D00A55C10 /* AppIapConfig.swift in Sources */,
+				EB395DC2269D31A00071A60D /* InnRequestHelper.swift in Sources */,
+				EB395DB0269D31A00071A60D /* ASAManage.swift in Sources */,
+				EB395DC0269D31A00071A60D /* InnLoginChallengeView.swift in Sources */,
 				EB000C2126969A6A00A55C10 /* KTyMainViewC.swift in Sources */,
+				EB395DB5269D31A00071A60D /* InnLoginHandler.swift in Sources */,
 				EB000C2D2696AD0900A55C10 /* CymCoinManager.swift in Sources */,
+				EB395DB2269D31A00071A60D /* HighLightingViewController.swift in Sources */,
+				EB395DD5269D31A00071A60D /* InnLoginViewController.swift in Sources */,
 				EB000CAB2697041000A55C10 /* AlertView.swift in Sources */,
-				EB000C862696AD2D00A55C10 /* HightLigtingHelper.swift in Sources */,
-				EB000C682696AD2D00A55C10 /* InnTwoFactorLoginView.swift in Sources */,
-				EB000C672696AD2D00A55C10 /* InnNativeWebLoginViewController.swift in Sources */,
+				EB395DAD269D31A00071A60D /* HightLightingPriceManager.swift in Sources */,
 				EB000C0F269695FE00A55C10 /* ViewController.swift in Sources */,
-				EB000C6A2696AD2D00A55C10 /* SwiftyTimer.swift in Sources */,
-				EB000C892696AD2D00A55C10 /* DataEncoding.swift in Sources */,
 				EB000C0B269695FE00A55C10 /* AppDelegate.swift in Sources */,
+				EB395DB8269D31A00071A60D /* InnNativeWebLoginViewController.swift in Sources */,
+				EB395DBC269D31A00071A60D /* Foundation+Extension.swift in Sources */,
 				EB000C8F2696AD6700A55C10 /* CyHStoreVC.swift in Sources */,
-				EB000C692696AD2D00A55C10 /* VC+Route.swift in Sources */,
-				EB000C852696AD2D00A55C10 /* HightLigtingUserManager.swift in Sources */,
-				EB000C6D2696AD2D00A55C10 /* StringExtension.swift in Sources */,
-				EB000C662696AD2D00A55C10 /* InnTextView.swift in Sources */,
 				EB000C902696AD6700A55C10 /* CyHSettingView.swift in Sources */,
-				EB000C732696AD2D00A55C10 /* InnLoginVerifyCodeView.swift in Sources */,
+				EB395DBA269D31A00071A60D /* VC+Route.swift in Sources */,
+				EB395DC4269D31A00071A60D /* InnLoginVerifyCodeView.swift in Sources */,
 				EB000C9E2696F6EC00A55C10 /* ListCollectionViewCell.swift in Sources */,
 				EB000C312696AD0900A55C10 /* CymKeyChain.swift in Sources */,
-				EB000C8B2696AD2D00A55C10 /* HighLightingViewController.swift in Sources */,
-				EB000C702696AD2D00A55C10 /* PublicFile.swift in Sources */,
+				EB395DAF269D31A00071A60D /* DataEncoding.swift in Sources */,
+				EB395DB4269D31A00071A60D /* AFlyerLibManage.swift in Sources */,
 				EB000C0D269695FE00A55C10 /* SceneDelegate.swift in Sources */,
-				EB000C832696AD2D00A55C10 /* LoadingView.swift in Sources */,
+				EB395DB3269D31A00071A60D /* HightLightingExtension.swift in Sources */,
+				EB395DAC269D31A00071A60D /* HightLigtingHelper.swift in Sources */,
+				EB395DC1269D31A00071A60D /* PublicFile.swift in Sources */,
+				EB395DBB269D31A00071A60D /* SwiftyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
